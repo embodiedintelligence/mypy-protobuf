@@ -629,7 +629,7 @@ class PkgWriter(object):
             l("pass")
             l("")
         for method in methods:
-            l("def {}(self,", method.name)
+            l("async def {}(self,", method.name)
             with self._indent():
                 l("request: {},", self._input_type(method))
             l(") -> {}: ...", self._output_type(method))
